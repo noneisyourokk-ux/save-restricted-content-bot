@@ -15,6 +15,8 @@ import os
 # ==============================
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+
+# ✅ API ID ekdum sahi jagah par set kar di hai
 API_ID = int(os.environ.get("API_ID", "22470912"))
 API_HASH = os.environ.get("API_HASH", "511be78079ed5d4bd4c967bc7b5ee023")
 
@@ -26,9 +28,10 @@ API_HASH = os.environ.get("API_HASH", "511be78079ed5d4bd4c967bc7b5ee023")
 # Add admin user IDs separated by commas in environment variables
 ADMINS = [int(admin) for admin in os.environ.get("ADMINS", "").split(",") if admin]
 
-# Fallback: Agar environment variable empty hai, toh direct aapki default IDs set ho jayengi
+# ✅ Fallback: Agar environment variable blank hoga, toh aapki real User ID admin banegi
 if not ADMINS:
     ADMINS = [7678862761]
+
 
 # ==============================
 # Database Configuration
